@@ -1,26 +1,21 @@
-import { Link } from "expo-router";
 import { useState } from "react";
 import { View, StyleSheet, Image, Text, ScrollView, Modal, TouchableOpacity, TextInput } from "react-native"
 
-// agora tem que fazer as outras cores e outros equipamentos
-//amarelo, verde. cerdiomax dualM etc...
-//trocar o redondo vermelho por frase igual ta no do wesley
-
-function Leitorios({ id, onRemove }: { id: number; onRemove: (id: number) => void }) {
+function LeitosMed({ id, onRemove }: { id: number; onRemove: (id: number) => void }) {
 
     const [modalVisible, setModalVisible] = useState(false);
 
     const [texto, setTexto] = useState("");
-    const [nomeAparelho, setNomeAparelho] = useState("Aparelho");
+    const [nomeAparelho, setNomeAparelho] = useState("Leito");
 
     const [textoDescricao1, setTextoDescricao1] = useState("");
-    const [nomeDescricao1, setNomeDescricao1] = useState("Código");
+    const [nomeDescricao1, setNomeDescricao1] = useState("SPO²");
 
     const [textoDescricao2, setTextoDescricao2] = useState("");
-    const [nomeDescricao2, setNomeDescricao2] = useState("Localização");
+    const [nomeDescricao2, setNomeDescricao2] = useState("Sala");
 
     const [textoDescricao3, setTextoDescricao3] = useState("");
-    const [nomeDescricao3, setNomeDescricao3] = useState("Endereço");
+    const [nomeDescricao3, setNomeDescricao3] = useState("HR");
 
     return (
         <ScrollView>
@@ -38,22 +33,22 @@ function Leitorios({ id, onRemove }: { id: number; onRemove: (id: number) => voi
                         <Text style={styles.modalTitle}>Editar aparelho</Text>
                         <TextInput
                             style={styles.input1}
-                            placeholder="Nome do equipamento..."
+                            placeholder="Número do leito..."
                             value={texto}
                             onChangeText={setTexto} />
                         <TextInput
                             style={styles.input2}
-                            placeholder="Código"
+                            placeholder="SPO²"
                             value={textoDescricao1}
                             onChangeText={setTextoDescricao1} />
                         <TextInput
                             style={styles.input2}
-                            placeholder="Localização"
+                            placeholder="Sala"
                             value={textoDescricao2}
                             onChangeText={setTextoDescricao2} />
                         <TextInput
                             style={styles.input2}
-                            placeholder="Endereço"
+                            placeholder="HR"
                             value={textoDescricao3}
                             onChangeText={setTextoDescricao3} />
 
@@ -101,7 +96,7 @@ function Leitorios({ id, onRemove }: { id: number; onRemove: (id: number) => voi
                         <TouchableOpacity onPress={() => onRemove(id)}>
                             <Image source={require("../assets/delete.png")} style={styles.icon} />
                         </TouchableOpacity>
-
+                        
                     </View>
                 </View>
 
@@ -171,7 +166,7 @@ const styles = StyleSheet.create({
         alignItems: "center",
     },
     redondoVermelho: {
-        backgroundColor: "#E50f37",
+        backgroundColor: "# ",
         color: "#FFFFFF",
         paddingVertical: 6,
         paddingHorizontal: 16,
@@ -273,4 +268,4 @@ const styles = StyleSheet.create({
     },
 });
 
-export default Leitorios
+export default LeitosMed

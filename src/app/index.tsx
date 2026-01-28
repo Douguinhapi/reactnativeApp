@@ -16,13 +16,15 @@ export default function Index() {
                 return Alert.alert("Atenção, informe os campos obrigatórios!")
             }
             else{
-                Alert.alert("Sucesso", "Logado com sucesso!!!",      
-                    [        
-                        {          
-                            text: "OK", onPress: () => router.replace("/home"),
-                        },
-                    ],      
-                    { cancelable: true });
+                router.replace("/home")
+                //só comentei as linhas porque o android studio nao ta funcionando e to codando pela web
+                // Alert.alert("Sucesso", "Logado com sucesso!!!",      
+                //     [        
+                //         {          
+                //             text: "OK", onPress: () => router.replace("/home"),
+                //         },
+                //     ],      
+                //     { cancelable: true });
             }
         }
         catch(error){
