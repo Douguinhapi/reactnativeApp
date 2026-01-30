@@ -26,16 +26,37 @@ function Lateral() {
             </View>
 
             <View style={styles.menu}>
+
                 <Link href="/leitos" style={styles.item}>
+                    <Image
+                        source={require("../assets/hospital-bed ECG.png")}
+                        style={styles.iconMenu}
+                    />
                     <Text style={styles.text}>Leitos</Text>
                 </Link>
 
                 <Link href="/usuario" style={styles.item}>
+                    <Image
+                        source={require("../assets/user ECG.png")}
+                        style={styles.iconMenu}
+                    />
                     <Text style={styles.text}>Usuário</Text>
                 </Link>
 
                 <Link href="/home" style={styles.item}>
+                    <Image
+                        source={require("../assets/computer ECG.png")}
+                        style={styles.iconMenu}
+                    />
                     <Text style={styles.text}>Equipamentos</Text>
+                </Link>
+
+                <Link href="/ecg" style={styles.item}>
+                    <Image
+                        source={require("../assets/heart ECG.png")}
+                        style={styles.iconMenu}
+                    />
+                    <Text style={styles.text}>ECG</Text>
                 </Link>
             </View>
 
@@ -66,10 +87,18 @@ const styles = StyleSheet.create({
         height: 32,
         resizeMode: "contain",
     },
+    iconMenu: {
+        width: 26,
+        height: 24,
+        resizeMode: "contain",
+        marginRight: 15,
+        opacity: 0.95,
+    },
     menu: {
         paddingHorizontal: 24,
     },
     item: {
+        alignItems: "center",
         paddingVertical: 18,
         borderBottomWidth: 1,
         borderColor: "#c1c1c1",
