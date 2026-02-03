@@ -1,4 +1,5 @@
 import { useState } from "react";
+import { Link } from "expo-router";
 import { View, StyleSheet, Image, Text, ScrollView, Modal, TouchableOpacity, TextInput } from "react-native"
 
 function LeitosMed({ id, onRemove }: { id: number; onRemove: (id: number) => void }) {
@@ -84,7 +85,9 @@ function LeitosMed({ id, onRemove }: { id: number; onRemove: (id: number) => voi
                         <Image
                             source={require("../assets/logoInstramed.png")}
                             style={styles.instraImg} />
-                        <Text style={styles.titleDea}>{nomeAparelho}</Text>
+                        <Link href="/ecg">
+                            <Text style={styles.titleDea}>{nomeAparelho}</Text>
+                        </Link>
                     </View>
 
                     <View style={styles.iconsContainer}>
@@ -96,7 +99,7 @@ function LeitosMed({ id, onRemove }: { id: number; onRemove: (id: number) => voi
                         <TouchableOpacity onPress={() => onRemove(id)}>
                             <Image source={require("../assets/delete.png")} style={styles.icon} />
                         </TouchableOpacity>
-                        
+
                     </View>
                 </View>
 

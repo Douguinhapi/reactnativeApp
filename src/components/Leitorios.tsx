@@ -89,7 +89,9 @@ function Leitorios({ id, onRemove }: { id: number; onRemove: (id: number) => voi
                         <Image
                             source={require("../assets/logoInstramed.png")}
                             style={styles.instraImg} />
-                        <Text style={styles.titleDea}>{nomeAparelho}</Text>
+                        <Link href="/ecg">
+                            <Text style={styles.titleDea}>{nomeAparelho}</Text>
+                        </Link>
                     </View>
 
                     <View style={styles.iconsContainer}>

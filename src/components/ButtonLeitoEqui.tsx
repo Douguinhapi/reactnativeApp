@@ -3,7 +3,7 @@ import { Link, usePathname } from "expo-router"
 
 function ButtonLeitoEqui() {
 
-    const pathname = usePathname(); // 👈 rota atual
+    const pathname = usePathname();
 
     const isEquipamentos = pathname === "/home";
     const isLeitos = pathname === "/leitos";

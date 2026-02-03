@@ -58,6 +58,23 @@ function Lateral() {
                     />
                     <Text style={styles.text}>ECG</Text>
                 </Link>
+
+                <Link href="/about" style={styles.item}>
+                    <Image
+                        source={require("../assets/search.png")}
+                        style={styles.iconMenu}
+                    />
+                    <Text style={styles.text}>Sobre</Text>
+                </Link>
+
+                <Link href="/notificacao" style={styles.item}>
+                    <Image
+                        source={require("../assets/notification.png")}
+                        style={styles.iconMenu}
+                    />
+                    <Text style={styles.text}>Notificação</Text>
+                </Link>
+
             </View>
 
         </ScrollView>
